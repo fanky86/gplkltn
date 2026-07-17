@@ -1,11 +1,11 @@
-import Database from "better-sqlite3";
+import { DatabaseSync } from "node:sqlite";
 import path from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const db = new Database(path.join(__dirname, "gplkltn.db"));
+const db = new DatabaseSync(path.join(__dirname, "gplkltn.db"));
 
-db.pragma("journal_mode = WAL");
+db.exec("PRAGMA journal_mode = WAL;");
 
 // Tabel user (admin/pengurus yang login)
 db.exec(`
