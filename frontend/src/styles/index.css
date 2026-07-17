@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0b0f0d;
+}
+
+::selection {
+  background: #c9a227;
+  color: #0b0f0d;
+}
+
+/* garis "sabetan" khas — elemen tanda tangan desain ini */
+.slash-divider {
+  position: relative;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #c9a227, transparent);
+  transform: skewX(-15deg);
+}
+
+.prose-blog {
+  color: #e7e2d6;
+  line-height: 1.8;
+}
+.prose-blog h1,
+.prose-blog h2,
+.prose-blog h3 {
+  font-family: "Fraunces", serif;
+  color: #e4c766;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+.prose-blog p {
+  margin-bottom: 1.1em;
+}
+.prose-blog a {
+  color: #c9a227;
+  text-decoration: underline;
+}
+.prose-blog img {
+  border-radius: 8px;
+  margin: 1.5em 0;
+}
+.prose-blog ul,
+.prose-blog ol {
+  margin: 1em 0 1em 1.5em;
+}
+
+/* focus visible untuk aksesibilitas keyboard */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #c9a227;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
