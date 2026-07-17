@@ -51,6 +51,28 @@ gplkltn-site/
 
 Butuh Node.js versi 18 ke atas.
 
+### Cara Cepat: Jalankan Backend + Frontend Sekaligus
+
+Dari folder utama `gplkltn-site/` (bukan folder backend/frontend):
+
+```bash
+npm install
+npm run install:all   # install dependency backend & frontend sekaligus
+npm run dev           # jalankan backend + frontend bareng
+```
+
+Backend jalan di `http://localhost:5017`, frontend di `http://localhost:5173`
+— keduanya muncul di satu terminal yang sama, ditandai warna label
+`BACKEND` (hijau) dan `FRONTEND` (cyan). Tekan `Ctrl+C` sekali untuk
+mematikan keduanya.
+
+> Sebelum `npm run dev`, jangan lupa siapkan file `.env` dulu di
+> `backend/.env` dan `frontend/.env` (lihat langkah manual di bawah).
+
+### Cara Manual (2 Terminal Terpisah)
+
+Kalau mau jalanin satu-satu / lebih jelas melihat log masing-masing:
+
 ### 1. Backend
 
 ```bash
